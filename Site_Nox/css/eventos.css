@@ -1,0 +1,253 @@
+/* Variáveis de cor */
+:root {
+    --evento-bg: #29283f;
+    --evento-border: #000000;
+    --evento-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    --evento-title: #05ece0;
+    --evento-desc: #ffffff;
+    --evento-info: #0a60b6;
+    --evento-highlight: #29283f;
+    --evento-separator: #a7bbc7;
+    --evento-ciano: #5d6d74;
+    
+    --font-primary: 'Poppins', sans-serif;
+}
+
+/* Estilos tipográficos da página história */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Container de cada evento */
+.evento {
+    margin-bottom: 40px;
+    padding: 28px 32px;
+    background: var(--evento-bg);
+    border-radius: 16px;
+    box-shadow: var(--evento-shadow);
+    border: 2px solid var(--evento-border);
+    transition: box-shadow 0.3s, border 0.3s;
+    position: relative;
+    font-family: var(--font-primary); 
+}
+.evento:not(:last-child)::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background: linear-gradient(90deg, var(--evento-highlight), transparent);
+    border-radius: 2px;
+    margin: 32px 0 0 0;
+}
+
+/* Imagem do evento - padronização absoluta */
+.evento-imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 22px;
+}
+.evento-imagem img {
+    width: 320px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    border: 2px solid var(--evento-border);
+    background: #000000;
+    aspect-ratio: 16/9;
+    transition: transform 0.2s;
+}
+.evento-imagem img:hover {
+    transform: scale(1.03);
+}
+
+/* Título do evento */
+.evento h2 {
+    color: var(--evento-title);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+    text-shadow: 0 2px 4px rgba(0,182,255,0.04);
+    font-family: var(--font-primary); 
+}
+
+/* Informações destacadas */
+.evento .info {
+    color: var(--evento-info);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    display: block;
+    font-family: var(--font-primary); 
+}
+.evento .destaque {
+    background: var(--evento-highlight);
+    padding: 4px 10px;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 500;
+    color: var(--evento-info);
+    margin-bottom: 8px;
+    font-family: var(--font-primary); 
+}
+
+/* Descrição */
+.evento p {
+    margin-bottom: 12px;
+    color: var(--evento-desc);
+    font-size: 1.08rem;
+    line-height: 1.6;
+    font-family: var(--font-primary); 
+}
+.evento strong, .evento b {
+    color: var(--evento-info);
+    font-weight: 700;
+}
+
+/* Separador mais visível */
+hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--evento-separator), transparent);
+    margin: 24px 0;
+    border-radius: 2px;
+}
+
+/* Formulário */
+.evento form {
+    margin-top: 18px;
+    padding: 12px 0 0 0;
+    border-top: 2px dashed var(--evento-separator);
+    font-family: var(--font-primary); 
+}
+
+/* Botões */
+.evento button {
+    background: var(--evento-info);
+    color: #ffffff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(13,110,253,0.10);
+    font-family: var(--font-primary); 
+}
+.evento button:hover {
+    background: #0095e0;
+    box-shadow: 0 4px 16px rgba(0,182,255,0.12);
+}
+
+/* Inputs */
+.evento input[type="number"],
+.evento textarea {
+    padding: 10px;
+    margin: 6px 0;
+    border: 1.5px solid var(--evento-border);
+    border-radius: 4px;
+    background: #3c5985;
+    color: var(--evento-title);
+    font-size: 1rem;
+    font-family: var(--font-primary); 
+}
+.evento input[type="number"] {
+    width: 70px;
+    margin-right: 12px;
+}
+.evento textarea {
+    width: 100%;
+    min-height: 90px;
+    resize: vertical;
+}
+
+/* Avaliações */
+.avaliacoes-container {
+    margin-top: 22px;
+    padding: 18px;
+    background: var(--evento-highlight);
+    border-radius: 10px;
+    font-family: var(--font-primary); 
+}
+.avaliacao {
+    padding: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1.5px dashed var(--evento-border);
+    font-family: var(--font-primary); 
+}
+.avaliacao:last-child {
+    border-bottom: none;
+}
+.avaliacao p {
+    margin: 6px 0;
+}
+
+/* Intro */
+.intro {
+    text-align: center;
+    margin-bottom: 36px;
+    padding: 24px;
+    background: var(--evento-highlight);
+    border-radius: 10px;
+    font-size: 1.15rem;
+    color: var(--evento-title);
+    font-weight: 500;
+    font-family: var(--font-primary); 
+}
+
+/* Link de "faça login" */
+.evento-login-link,
+a.faca-login {
+    color: var(--evento-ciano) !important;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: underline;
+    transition: color 0.2s;
+    background: rgba(0,182,255,0.07);
+    padding: 4px 12px;
+    border-radius: 6px;
+    margin: 0 0 0 6px;
+    display: inline-block;
+    font-family: var(--font-primary); 
+}
+.evento-login-link:hover,
+a.faca-login:hover {
+    color: #007bbf !important;
+    background: rgba(0,182,255,0.15);
+    text-decoration: none;
+}
+.login-link-ciano {
+    color: #00bfff; 
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-family: var(--font-primary); 
+}
+
+.login-link-ciano:hover {
+    color: #009acd; 
+    text-decoration: underline;
+}
+
+.avaliacao {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-family: var(--font-primary); 
+}
+
+
+body {
+    font-family: var(--font-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    font-weight: 600;
+}
+
+button, input, textarea, select {
+    font-family: var(--font-primary);
+}

@@ -1,0 +1,297 @@
+/* ESTILOS ESPECÍFICOS PARA GERENCIAMENTO DE EVENTOS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ESTRUTURA PRINCIPAL */
+.admin-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.admin-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--evento-shadow);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.admin-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* TIPOGRAFIA PADRONIZADA */
+.admin-title {
+    color: var(--accent-yellow);
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-shadow: 0 2px 4px rgba(0,182,255,0.04);
+    position: relative;
+}
+
+.admin-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--accent-yellow);
+}
+
+.card-title {
+    color: var(--primary-blue);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+/* FORMULÁRIOS */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+input, textarea, select {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-light);
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 0.95rem;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--accent-yellow);
+    box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.15);
+}
+
+input[type="file"] {
+    padding: 8px;
+    background-color: var(--darker-bg);
+}
+
+/* TABELA DE EVENTOS */
+.event-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.event-table th, 
+.event-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-light);
+}
+
+.event-table th {
+    background-color: var(--darker-bg);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+.event-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.event-table tr:hover {
+    background-color: rgba(58, 143, 255, 0.1);
+}
+
+/* IMAGENS */
+.image-preview-container {
+    margin-bottom: 1.5rem;
+}
+
+.img-evento-edicao {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.img-evento-edicao:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.remove-image {
+    color: var(--danger-red);
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: inline-block;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.remove-image:hover {
+    text-decoration: underline;
+    color: #ff6b6b;
+}
+
+/* BOTÕES */
+.btn-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.03em;
+}
+
+.btn-primary {
+    background: var(--primary-blue);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--hover-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-danger {
+    background: var(--danger-red);
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c9302c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* MENSAGENS DE ALERTA */
+.alert {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.alert-success {
+    background-color: rgba(40, 167, 69, 0.15);
+    border-left: 4px solid var(--success-green);
+    color: var(--text-light);
+}
+
+.alert-danger {
+    background-color: rgba(217, 83, 79, 0.15);
+    border-left: 4px solid var(--danger-red);
+    color: var(--text-light);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+    
+    .actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+    }
+    
+    .admin-title {
+        font-size: 1.8rem;
+    }
+    
+    .card-title {
+        font-size: 1.3rem;
+    }
+    
+    .event-table {
+        display: block;
+        overflow-x: auto;
+        font-size: 0.85rem;
+    }
+    
+    .event-table th, 
+    .event-table td {
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-card {
+        padding: 1.5rem;
+    }
+    
+    .admin-title {
+        font-size: 1.6rem;
+    }
+    
+    input, textarea, select {
+        padding: 8px 10px;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}

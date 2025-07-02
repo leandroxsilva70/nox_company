@@ -1,0 +1,27 @@
+Credenciais do aluno:
+
+Nome: Maria Clara Silva
+
+Email: maria.clara@teste.com
+
+Senha: password
+
+RM: 888888
+
+ID ETEC: 3
+
+Ativo: Sim
+
+Credenciais do professor:
+
+Nome: Carlos Henrique Ramos
+
+Email: carlos.henrique@teste.com
+
+Email Institucional: carlos.henrique@etec.sp.gov.br
+
+Senha: password
+
+ID ETEC: 4
+
+Ativo: Sim
